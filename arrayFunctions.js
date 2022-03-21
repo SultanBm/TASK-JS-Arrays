@@ -10,14 +10,16 @@
  */
 function isArrayLengthOdd(numbers) {
   // Your code here
-  if (numbers.length % 2 == 1) {
-    return true;
-  } else {
-    return false;
-  }
+  // if (numbers.length % 2 == 1) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+  return numbers.length % 2 === 1;
 }
 let numbers = [1, 2, 3, 4, 5];
-console.log(isArrayLengthOdd(numbers));
+isArrayLengthOdd(numbers);
+// console.log(isArrayLengthOdd(numbers));
 
 /**
  * isArrayLengthEven(numbers):
@@ -31,15 +33,16 @@ console.log(isArrayLengthOdd(numbers));
  */
 function isArrayLengthEven(numbers) {
   // Your code here
-  if (numbers.length % 2 == 0) {
-    return true;
-  } else {
-    return false;
-  }
+  // if (numbers.length % 2 == 0) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+  return numbers.length % 2 === 0;
 }
 numbers = [1, 2, 3, 4, 5];
-console.log(isArrayLengthEven(numbers));
-
+// console.log(isArrayLengthEven(numbers));
+isArrayLengthEven(numbers);
 /**
  * addLailaToArray(instructors):
  * - receives array `instructors`
@@ -50,12 +53,12 @@ console.log(isArrayLengthEven(numbers));
  */
 function addLailaToArray(instructors) {
   // Your code here
-  let arr = instructors;
-  arr.push("Laila");
-  return console.log(arr);
+
+  instructors.push("Laila");
+  return instructors;
 }
 let instructors = ["Sultan"];
-addLailaToArray(instructors);
+console.log(addLailaToArray(instructors));
 
 /**
  * eliminateTeam(teams):
@@ -86,9 +89,9 @@ console.log(teams);
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
   if (fruits.length % 2 == 0) {
-    return fruits.splice(0, 2);
+    return fruits.splice(fruits.length / 2, fruits.length);
   } else {
-    return (fruits.length = 0);
+    return [];
   }
 }
 let fruits = ["apple", "orange", "banana", "kiwi"];
@@ -110,11 +113,11 @@ console.log(fruits);
  */
 function youGottaCalmDown(shout) {
   // Your code here
-  return shout.slice(0, shout.indexOf("!") + 1);
+  const index = shout.indexOf("!");
+  return shout.slice(0, index + 1);
 }
 let shout = "HI!!!!!!!!!!";
-
-console.log(youGottaCalmDown(shout));
+youGottaCalmDown(shout);
 
 module.exports = {
   isArrayLengthOdd,
